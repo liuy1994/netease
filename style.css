@@ -178,7 +178,7 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 .tabs .tabs-content .recommend .last-list .a:after{
     content: '';
     height: 1px;
-    width:365px;
+    width:100%;
     background: rgba(0,0,0,0.1);
     position: absolute;
     bottom:0;
@@ -252,4 +252,23 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     font-size: 8px;
     line-height: 16px;
     text-align: center;
+}
+.tabs .tabs-content .hot{
+    margin-top: -20px;
+}
+.tabs .tabs-content .hot .hotbar{
+    background:rgba(0,0,0,.2);
+    padding-left:20px;
+    position: relative;
+    width:375px;
+    height: 146px;
+}
+.tabs .tabs-content .hot .hotbar .hot-logo{
+    width:142px;
+    height: 67px;
+    position: absolute;
+    top:30px;
+    border:1px solid red;
+    background: url(//s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) -23px -30px;
+    background-size: 166px 97px;
 }
