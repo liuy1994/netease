@@ -218,10 +218,38 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     position: absolute;
     top:16px;
     right:10px;
-    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) -24px 0px;
+    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) no-repeat -24px 0px;
     background-size: 166px 97px;
 }
 .tabs .tabs-content .recommend .art{
+    margin-top:4px;
     height: 200px;
+    padding-top: 63px;
     background:url(http://s3.music.126.net/m/s/img/recommand_bg_2x.png?d045fafc60e017b653f8065a87496922);
+    background-size: 372px 203px;
+}
+.tabs .tabs-content .recommend .art .logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.tabs .tabs-content .recommend .art .logo .logosvg{
+    height: 44px;
+}
+.tabs .tabs-content .recommend .art .download{
+    border:1px solid #d33a31;
+    border-radius:20px;
+    color:#d33a31;
+    width:301px;
+    height: 40px;
+    font-size: 16px;
+    margin:5px auto;
+    line-height: 38px;
+    text-align: center;
+}
+.tabs .tabs-content .recommend .art .remark{
+    color: #888;
+    font-size: 8px;
+    line-height: 16px;
+    text-align: center;
 }
