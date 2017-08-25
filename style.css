@@ -257,18 +257,99 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     margin-top: -20px;
 }
 .tabs .tabs-content .hot .hotbar{
-    background:rgba(0,0,0,.2);
-    padding-left:20px;
-    position: relative;
+    padding-left:19px;
     width:375px;
     height: 146px;
+    background: url(//i.loli.net/2017/08/23/599d8806abbd6.jpg) no-repeat 0px 0px;
+    background-size: 375px 146px;
+    position: relative;
+    display: flex;
+}
+.tabs .tabs-content .hot .hotbar::after{
+    content:'';
+    background-color: rgba(0,0,0,.2);
+    width:100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top:0;
+    right:0;
+    display: flex;
+    flex-direction: column;
 }
 .tabs .tabs-content .hot .hotbar .hot-logo{
     width:142px;
     height: 67px;
+    z-index: 5;
     position: absolute;
-    top:30px;
-    border:1px solid red;
-    background: url(//s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) -23px -30px;
+    top:25px;
+    background: url(//s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) no-repeat -23px -30px;
+    background-size: 166px 97px;
+}
+.tabs .tabs-content .hot .hotbar .date{
+    z-index: 5;
+    color:hsla(0,0%,100%,.8);
+    font-size: 11px;
+    position: absolute;
+    bottom:29px;
+    left:20px;
+}
+.tabs .tabs-content .hot .hot-list{
+    margin-left:10px;
+    position: relative; 
+    margin-top:146px;
+}
+.tabs .tabs-content .hot .hot-list .a{
+    width:100%;
+    position:relative;
+    padding:6px 0;
+}
+.tabs .tabs-content .hot .hot-list .a:after{
+    content: '';
+    height: 1px;
+    width:100%;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+.tabs .tabs-content .hot .hot-list .number{
+    
+}
+.tabs .tabs-content .hot .hot-list .name{
+    width:323px;
+    height: 25px;
+    padding-top:3px;
+}
+.tabs .tabs-content .hot .hot-list .name p span{
+    color:#888;
+}
+.tabs .tabs-content .hot .hot-list .author{
+    font-size: 12px;
+    color:#888;
+    width:323px;
+    height: 18px;
+    padding-top:2px;
+    position: relative;
+}.tabs .tabs-content .hot .hot-list .author.sq{
+    padding-left:16px;
+}
+.tabs .tabs-content .hot .hot-list .author.sq::after{
+    content:'';
+    width:12px;
+    height: 8px;
+    position: absolute;
+    left:0;
+    top:5px;
+    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880);
+    background-size: 166px 97px;
+}
+.tabs .tabs-content .hot .hot-list .icon-play{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top:16px;
+    right:10px;
+    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) no-repeat -24px 0px;
     background-size: 166px 97px;
 }
