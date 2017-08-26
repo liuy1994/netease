@@ -199,7 +199,8 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     height: 18px;
     padding-top:2px;
     position: relative;
-}.tabs .tabs-content .recommend .last-list .author.sq{
+}
+.tabs .tabs-content .recommend .last-list .author.sq{
     padding-left:16px;
 }
 .tabs .tabs-content .recommend .last-list .author.sq::after{
@@ -249,12 +250,14 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 }
 .tabs .tabs-content .recommend .art .remark{
     color: #888;
-    font-size: 8px;
+    font-size: 12px;
+    transform: scale(.75);
     line-height: 16px;
     text-align: center;
 }
 .tabs .tabs-content .hot{
     margin-top: -20px;
+    position: relative;
 }
 .tabs .tabs-content .hot .hotbar{
     padding-left:19px;
@@ -289,22 +292,35 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 .tabs .tabs-content .hot .hotbar .date{
     z-index: 5;
     color:hsla(0,0%,100%,.8);
-    font-size: 11px;
+    font-size: 12px;
+    transform: scale(.9);
     position: absolute;
     bottom:29px;
-    left:20px;
+    left:15px;
 }
 .tabs .tabs-content .hot .hot-list{
-    margin-left:10px;
-    position: relative; 
-    margin-top:146px;
+    position: absolute;
+    top:145px;
+    left:10px;
+}
+.tabs .tabs-content .hot .hot-list a{
+    display: flex;
+}
+.tabs .tabs-content .hot .hot-list .number{
+    font-size: 17px;    
+    color: #999;
+    height: 55px;
+    padding-top:19px;
+    padding-right:10px;
+}
+.tabs .tabs-content .hot .hot-list .number.top{
+    color: #df3436;
 }
 .tabs .tabs-content .hot .hot-list .a{
-    width:100%;
-    position:relative;
-    padding:6px 0;
+    width: 335px;
+    position: relative;
 }
-.tabs .tabs-content .hot .hot-list .a:after{
+.tabs .tabs-content .hot .hot-list .a::after{
     content: '';
     height: 1px;
     width:100%;
@@ -313,43 +329,68 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     bottom:0;
     left:0;
 }
-.tabs .tabs-content .hot .hot-list .number{
-    
+.tabs .tabs-content .hot .hot-list .a .name{
+    font-size: 17px;
+    margin-top:10px;
+    margin-left:-1px;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    width:300px;
 }
-.tabs .tabs-content .hot .hot-list .name{
-    width:323px;
-    height: 25px;
-    padding-top:3px;
-}
-.tabs .tabs-content .hot .hot-list .name p span{
+.tabs .tabs-content .hot .hot-list .a .name span{
     color:#888;
+
 }
-.tabs .tabs-content .hot .hot-list .author{
+.tabs .tabs-content .hot .hot-list .a .author{
     font-size: 12px;
+    width:300px;
     color:#888;
-    width:323px;
-    height: 18px;
-    padding-top:2px;
     position: relative;
-}.tabs .tabs-content .hot .hot-list .author.sq{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    left:-1px;
+}
+.tabs .tabs-content .hot .hot-list .a .author.sq{
     padding-left:16px;
 }
-.tabs .tabs-content .hot .hot-list .author.sq::after{
+.tabs .tabs-content .hot .hot-list .a .author.sq::after{
     content:'';
     width:12px;
     height: 8px;
     position: absolute;
-    left:0;
-    top:5px;
+    left:0px;
+    top:3px;
     background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880);
     background-size: 166px 97px;
 }
-.tabs .tabs-content .hot .hot-list .icon-play{
-    width: 22px;
+.tabs .tabs-content .hot .hot-list .a .icon-play{
+    width:22px;
     height: 22px;
-    position: absolute;
-    top:16px;
-    right:10px;
-    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) no-repeat -24px 0px;
+    background: url(//s3.music.126.net/m/s/img/index_icon_2x.png?5207a28…) -24px 0;
     background-size: 166px 97px;
+    position: absolute;
+    top:17px;
+    right:9px;
 }
+.tabs .tabs-content .hot .loadMore{
+    position: absolute;
+    top:1246px;
+    left:-1px;
+    line-height: 55px;
+    width:100vw;
+    font-size: 14px;
+    text-align: center;
+    color:#999;
+}
+.tabs .tabs-content .search .search-bar{
+    width:100%;
+    height: 30px;
+    padding:0 30px;
+    border: 1px solid red;
+}
+
