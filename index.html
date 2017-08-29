@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>网易云音乐</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./jquery.min.js"></script>
-    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./vendors/jquery.min.js"></script>
+    <script src="./vendors/av-min.js"></script>
+    <!-- <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
 </head>
 
 <body>
@@ -64,7 +65,7 @@
             </div>
         </div>
         <div class="tabs">
-            <ol class="tabs-control">
+            <ol id="tabs" class="tabs-control">
                 <li class="recommend">
                     <div class="text">推荐音乐</div>
                 </li>
@@ -75,7 +76,7 @@
                     <div class="text">搜索</div>
                 </li>
             </ol>
-            <div class="tabs-content">
+            <div id="tabs-content" class="tabs-content">
                 <div class="recommend">
                     <h3>推荐歌单</h3>
                     <div class="album">
@@ -416,30 +417,33 @@
                 <div class="search active">
                     <div class="search-bar">
                         <div class="icon-search"></div>
-                        <div class="note">搜索歌曲、歌手、专辑</div>
-                        <input id="search" type="text" value="" oninput="search()">
-                        <div class="icon-empty"></div>
+                        <div id="note" class="note">搜索歌曲、歌手、专辑</div>
+                        <input id="search" type="text" value="">
+                        <div id="icon-empty" class="icon-empty"></div>
                     </div>
                     <div class="segment"></div>
                     <div class="search-hot">
                         <h5>热门搜索</h5>
-                        <ul class="list">
+                        <ul id="search-hot" class="list">
                             <li>身旁</li>
                             <li>刚好遇见你</li>
-                            <li>陈一发</li>
+                            <li>陈一发儿</li>
                             <li>暧昧</li>
                             <li>周杰伦</li>
                             <li>成都</li>
                             <li>远走高飞</li>
                         </ul>
                     </div>
-                    <div class="search-result">
-                        这里是结果
+                    <h5>搜索结果</h5>
+                    <div class="search-result" id="search-result">
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <script src="./av.js"></script>
     <script src="./index.js"></script>
 
 </body>
