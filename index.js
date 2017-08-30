@@ -28,20 +28,52 @@ $('ul#search-hot').on('click', 'li', function (e) {
     $($('#icon-empty')[0]).addClass('input');
     $($('#note')[0]).addClass('input');
     var value = $('input#search').val().trim();
-    search(value);
+    searchName(value);
+    searchAuthor(value);
 })
 
 // 监听搜索框输入的内容
 $('input#search').on('input', function (e) {
     var value = $(e.currentTarget).val().trim();
-    search(value);
+    searchName(value);
+    searchAuthor(value);
 })
-function search(value) {
+
+//搜索歌曲
+function searchName(value) {
     if(value === ''){
     }else{
         $('#search-result').empty()
         var query = new AV.Query('Song');
         query.contains('name', value);
+        query.find().then(function (result) {
+            for(var i=0;i<result.length;i++){
+                var song = result[i].attributes;
+                var a = `
+                <a href="#" data-id="${result[i].id}">
+                <div class="a">
+                    <div class="name">
+                        <p>${song.name}</p>
+                    </div>
+                    <div class="author sq">${song.author} - ${song.album}</div>
+                    <div class="icon-play"></div>
+                </div>
+            </a>
+                `
+                $('#search-result').append(a);
+            }
+            
+        })
+    }
+    
+}
+//搜索歌手
+function searchAuthor(value) {
+    if(value === ''){
+    }else{
+        $('#search-result').empty()
+        var query = new AV.Query('Song');
+        query.contains('author', value);
         query.find().then(function (result) {
             for(var i=0;i<result.length;i++){
                 var song = result[i].attributes;
