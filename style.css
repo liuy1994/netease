@@ -1,3 +1,6 @@
+*.input{
+    display: none;
+}
 .topbar{
     background: #d43c33;
     height: 64px;
@@ -461,6 +464,9 @@
     color:#666;
     padding: 0 10px;
 }
+.tabs .tabs-content .search .search-hot.input{
+    display: none;
+}
 .tabs .tabs-content .search .search-hot ul.list{
     display: flex;
     flex-wrap: wrap;
@@ -544,4 +550,18 @@
     right:10px;
     background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) no-repeat -24px 0px;
     background-size: 166px 97px;
+}
+
+.tabs .tabs-content .search .search-content{
+    width:94.666667vw;
+    height: 40px;
+    margin:0 auto;
+    margin-bottom: 10px;
+    margin-top:-3px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-top:5px;
+}
+.tabs .tabs-content .search .search-content p{
+    color: #507daf;
+    font-size: 15px;
 }
