@@ -47,8 +47,8 @@ $('#search').on('input', function (e) {
 })
 
 //点击搜索历史
-$('#search-history').on('click','li',function(e){
-    $('#search')[0].value = $(e.currentTarget).children()[1].innerText
+$('#search-history li').on('click','div',function(e){
+    $('#search')[0].value = e.currentTarget.innerText
     input()
 })
 
