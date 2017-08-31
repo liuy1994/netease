@@ -21,15 +21,22 @@ $('#icon-empty').on('click', function (e) {
 $('#search-hot').on('click', 'li', function (e) {
     $('#search')[0].value = e.currentTarget.innerText
     input()
-
 })
 
 //搜索框输入
-$('#search').on('input', function (e) {
+$('#search').on('input', function (e) {    
     var value = $(e.currentTarget).val().trim()
     input()
     if (value === '') {
         noinput()
+    }
+    console.log($('#search-result')[0])
+
+    
+    if($('#search-result')[0].innerHTML === ''){
+        console.log('')
+    }else{
+        console.log('')
     }
 })
 
@@ -56,15 +63,12 @@ function input() {
     $($('#search-content')[0]).empty()
     var p = `
     <p>搜索“${value}”</p>
+    <h5>搜索结果</h5>
     `
     $($('#search-content')[0]).append(p)
+    
     searchName(value)
     searchAuthor(value)
-    if($('#search-result')[0].innerHTML === ''){
-        console.log('没有')
-    }else{
-        console.log('有')
-    }
 }
 
 
@@ -80,8 +84,8 @@ function searchName(value) {
             search(result)
         })
     }
-
 }
+
 //搜索歌手
 function searchAuthor(value) {
     $($('#search-result')[0]).empty()
@@ -93,8 +97,8 @@ function searchAuthor(value) {
             search(result)
         })
     }
-
 }
+
 //搜索
 function search(result) {
     for (var i = 0; i < result.length; i++) {
@@ -110,6 +114,6 @@ function search(result) {
         </div>
     </a>
         `
-        $('#search-result').append(a)
+        $('#search-result').append(a)        
     }
 }
