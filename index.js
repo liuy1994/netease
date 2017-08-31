@@ -24,20 +24,32 @@ $('#search-hot').on('click', 'li', function (e) {
 })
 
 //搜索框输入
+var timer = null
 $('#search').on('input', function (e) {    
-    var value = $(e.currentTarget).val().trim()
-    input()
-    if (value === '') {
-        noinput()
+    if(timer){
+        window.clearTimeout(timer)        
+    }else{        
     }
-    console.log($('#search-result')[0])
+    timer = setTimeout(function(){
+        var value = $(e.currentTarget).val().trim()
+        input()
+        if (value === '') {
+            noinput()
+        }
+        setTimeout(function(){
+            if($('#search-result')[0].innerHTML === ''){
+                var h6 = `<h6>没有结果<h6>`
+                $('#search-result').append(h6)
+            }else{
+            }
+        },200)
+    },300)        
+})
 
-    
-    if($('#search-result')[0].innerHTML === ''){
-        console.log('')
-    }else{
-        console.log('')
-    }
+//点击搜索历史
+$('#search-history').on('click','li',function(e){
+    $('#search')[0].value = $(e.currentTarget).children()[1].innerText
+    input()
 })
 
 
@@ -65,8 +77,7 @@ function input() {
     <p>搜索“${value}”</p>
     <h5>搜索结果</h5>
     `
-    $($('#search-content')[0]).append(p)
-    
+    $($('#search-content')[0]).append(p)    
     searchName(value)
     searchAuthor(value)
 }

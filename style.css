@@ -551,7 +551,20 @@
     background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) no-repeat -24px 0px;
     background-size: 166px 97px;
 }
-
+.tabs .tabs-content .search .search-result h6{
+    line-height: 35px;
+    font-size: 16px;
+    padding-top:10px;
+}
+.tabs .tabs-content .search .search-result h6:after{
+    content: '';
+    height: 1px;
+    width:100%;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    bottom:0;
+    left:0;
+}
 .tabs .tabs-content .search .search-content{
     width:94.666667vw;
     height: 40px;
