@@ -420,7 +420,7 @@
                         <div class="icon-search"></div>
                         <div id="note" class="note">搜索歌曲、歌手、专辑</div>
                         <input id="search" type="text" value="">
-                        <div id="icon-empty" class="icon-empty"></div>
+                        <div id="icon-empty" class="icon-empty hiden"></div>
                     </div>
                     <div class="segment"></div>
                     <div class="search-hot">
@@ -435,18 +435,40 @@
                             <li>远走高飞</li>
                         </ul>
                     </div>
-                    <div class="search-content input" id="search-content">
-                        
+                    <div class="search-content hiden" id="search-content">
+                    </div>                    
+                    <div class="search-result hiden" id="search-result">
+                        <h5>搜索结果</h5>
+                        <a href="#" data-id="${result[i].id}">
+                            <div class="a">
+                                <div class="name">
+                                    <p>${song.name}</p>
+                                </div>
+                                <div class="author sq">${song.author} - ${song.album}</div>
+                                <div class="icon-play"></div>
+                            </div>
+                        </a>
                     </div>
-                    <h5 id="result-item" class="input" >搜索结果</h5>
-                    <div class="search-result" id="search-result">
-                        
+                    <div class="search-history" id="history-item" class="">
+                        <h5>搜索历史</h5>
+                        <ul id="search-history">
+                            <li>
+                                <i class="icon-history"></i>
+                                <div>搜索历史1</div>
+                                <i class="icon-delete"></i>
+                            </li>
+                            <li>
+                                <i class="icon-history"></i>
+                                <div>搜索历史2</div>
+                                <i class="icon-delete"></i>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script src="./av.js"></script>
     <script src="./index.js"></script>
 
