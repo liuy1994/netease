@@ -115,7 +115,7 @@ function search(result) {
     for (var i = 0; i < result.length; i++) {
         var song = result[i].attributes
         var a = `
-        <a href="#" data-id="${result[i].id}">
+        <a href="./playing.html" data-id="${result[i].id}">
         <div class="a">
             <div class="name">
                 <p>${song.name}</p>
