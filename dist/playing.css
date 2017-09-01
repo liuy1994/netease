@@ -1,0 +1,23 @@
+.page{
+    height: 100vh;
+    position: relative;
+}
+.page::after{
+    content:'';
+    width:100%;
+    height: 100%;
+    position: absolute;
+    z-index: -5;
+    top:0;
+    left:0;
+    background: transparent url(http://p1.music.126.net/tfa811GLreJI_S0h9epqRA==/3394192426154346.jpg) no-repeat 50% 50%;
+    background-size: 200%;
+    filter: blur(50px) brightness(0.5);
+}
+.point{
+    height: 137px;
+    width:96px;
+    background: url(http://s3.music.126.net/m/s/img/needle-ip6.png?be4ebbeb6befadfcae75ce174e7db862);
+    background-size: cover;
+    margin-left:calc(50% - 15px);
+}

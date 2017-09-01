@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>网易云音乐</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dist/reset.css">
+    <link rel="stylesheet" href="./dist/style.css">
     <script src="./vendors/jquery.min.js"></script>
     <script src="./vendors/av-min.js"></script>
     <!-- <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
@@ -67,18 +67,18 @@
         </div>
         <div class="tabs">
             <ol id="tabs" class="tabs-control">
-                <li class="recommend">
+                <li class="recommend active">
                     <div class="text">推荐音乐</div>
                 </li>
                 <li class="hot">
                     <div class="text">热歌榜</div>
                 </li>
-                <li class="search active">
+                <li class="search">
                     <div class="text">搜索</div>
                 </li>
             </ol>
             <div id="tabs-content" class="tabs-content">
-                <div class="recommend">
+                <div class="recommend active">
                     <h3>推荐歌单</h3>
                     <div class="album">
                         <a href="#" class="images">
@@ -241,8 +241,6 @@
                         <div class="download"><a href="./download.html">打开APP，发现更多好音乐 > </a></div>
                         <div class="remark">网易公司版权所有©1997-2017 杭州乐读科技有限公司运营</div>
                     </div>
-
-
                 </div>
                 <div class="hot">
                     <div class="hotbar">
@@ -415,7 +413,7 @@
                         <div class="loadMore"><a href="./download.html">查看完整榜单 &gt;</a></div>
                     </a>
                 </div>
-                <div class="search active">
+                <div class="search">
                     <div class="search-bar">
                         <div class="icon-search"></div>
                         <div id="note" class="note">搜索歌曲、歌手、专辑</div>
@@ -454,7 +452,9 @@
                         <ul id="search-history">
                             <li>
                                 <i class="icon-history"></i>
-                                <div><p>周杰伦</p></div>
+                                <div>
+                                    <p>周杰伦</p>
+                                </div>
                                 <i class="icon-delete"></i>
                             </li>
                             <li>
@@ -484,8 +484,15 @@
         </div>
     </div>
 
-    <script src="./av.js"></script>
-    <script src="./index.js"></script>
+    <script>
+        var APP_ID = '1Qdc1TPXUizTEg6dQCV2CLPr-gzGzoHsz';
+        var APP_KEY = 'iocnXl16pNnwl7oSE1mObQFu';
+        AV.init({
+            appId: APP_ID,
+            appKey: APP_KEY
+        });
+    </script>
+    <script src="./dist/index.js"></script>
 
 </body>
 
