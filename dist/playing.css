@@ -1,6 +1,7 @@
 .page{
     height: 100vh;
     position: relative;
+    font-family:Helvetica, sans-serif;
 }
 .page::after{
     content:'';
@@ -20,4 +21,95 @@
     background: url(http://s3.music.126.net/m/s/img/needle-ip6.png?be4ebbeb6befadfcae75ce174e7db862);
     background-size: cover;
     margin-left:calc(50% - 15px);
+    position: relative;
+    z-index: 5;
 }
+.wrapper{
+    height: 296px;
+    width:296px;
+    margin:0 auto;
+    margin-top:-68px;
+    position: relative;
+}
+.wrapper .circle{
+    height: 100%;
+    width:100%;
+    background: url(http://s3.music.126.net/m/s/img/disc-ip6.png?69796123ad7cfe95781ea38aac8f2d48);
+    background-size: cover;
+    position: relative;
+}
+.wrapper .circle::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: url(http://s3.music.126.net/m/s/img/disc_light.png?2bb24f3fd11569809b817b4988f12bc7);
+    background-size: cover;
+}
+.wrapper .cover{
+    width:184px;
+    height: 184px;
+    position: absolute;
+    top:calc(50% - 92px);
+    left:calc(50% - 92px);
+}
+.wrapper .cover img{
+    width:100%;
+    height: 100%;
+    border:1px solid #bbb;
+    border-radius:50%;
+}
+.lyric{
+    margin-top: 25px;
+    text-align: center;
+}
+.lyric h2{
+    color:white;
+    font-size: 18px;
+    line-height: 1.1;
+}
+.lyric span{
+    font-size: 16px;
+    color: hsla(0,0%,100%,.6);
+}
+.lyric .lyric-content{
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: hsla(0,0%,100%,.6);
+}
+.lyric .lyric-content p{
+    padding-bottom: 8px;
+}
+.more{
+    position: absolute;
+    bottom:20px;
+    left:0;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+.more .open{
+    height:42px;
+    width:140px;
+    color:#d43b32;
+    border:1px solid #d43b32;
+    border-radius: 4px;
+    padding-top:11px;
+    padding-left:48px;
+}
+.more .download{
+    height:42px;
+    width:140px;
+    color:#fff;
+    background: #d43b32;
+    margin-left: 12px;
+    border-radius: 4px;
+    padding-top:12px;
+    padding-left:49px;
+}
+
+
