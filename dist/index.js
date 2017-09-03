@@ -128,3 +128,34 @@ function search(result) {
         $('#search-result').append(a)        
     }
 }
+
+
+
+
+
+
+
+
+
+//查找ID
+var a = $('.list a')
+var i=0
+for(i=0;i<a.length;i++){
+    var regex = /([A-Z].*|[\u4e00-\u9fa5].*)/
+    var matches = a[i].innerText.match(regex)[0]
+    var name = matches.split('(')[0].trim()
+    addId(name)
+}
+
+
+//把id添加到关键字
+function addId(name){  
+    var j = i  
+    var query = new AV.Query('Song')
+    query.contains('name', name)
+    query.find().then(function (results) { 
+        var result = results[0]
+        var id = result.id
+        a[j].setAttribute('href','./playing.html?' + id)
+    })
+}

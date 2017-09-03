@@ -1,10 +1,10 @@
-.page{
+.playing{
     height: 100vh;
     position: relative;
     font-family:Helvetica, sans-serif;
     overflow: hidden;
 }
-.page::after{
+.playing::after{
     content:'';
     width:100%;
     height: 100%;
@@ -16,7 +16,7 @@
     background-size: 200%;
     filter: blur(50px) brightness(0.5);
 }
-.point{
+.playing .point{
     height: 137px;
     width:96px;
     background: url(http://ovmr7ndid.bkt.clouddn.com/point.png);
@@ -25,41 +25,41 @@
     position: relative;
     z-index: 5;
 }
-.point.pause{
+.playing .point.pause{
     transform-origin: 0 0;
     transform: rotateZ(-20deg);
     animation-duration:0.2s;
 }
-.wrapper{
+.playing .wrapper.pause{
     margin-top:-67px;
     position: relative;
 }
-.wrapper::before{
+.playing .wrapper.pause::before{
     content:'';
     width:56px;
     height: 56px;
     border-radius: 50%;
     position: absolute;
     z-index: 10;
-    top:120px;
-    left:160px;
+    top:calc(50% - 28px);
+    left:calc(50% - 28px);
     padding:2px;
-    background: rgba(0,0,0,0.2) url(http://ovmr7ndid.bkt.clouddn.com/playing.png) no-repeat;
+    background: rgba(0,0,0,0.2) url(http://ovmr7ndid.bkt.clouddn.com/%E6%92%AD%E6%94%BE.png) no-repeat;
     background-size: cover;
 }
-.wrapper::after{
+.playing .wrapper.play::after{
     content:'';
-    width:70px;
-    height: 70px;
+    width:56px;
+    height: 56px;
     border-radius: 50%;
     position: absolute;
     z-index: 10;
-    top:113px;
-    left:153px;
-    background: rgba(0,0,0,0.2) url(http://ovmr7ndid.bkt.clouddn.com/pausing.png);
+    top:calc(50% - 28px);
+    left:calc(50% - 28px);
+    background: rgba(0,0,0,0.2) url(http://ovmr7ndid.bkt.clouddn.com/%E6%9A%82%E5%81%9C.png);
     background-size: cover;
 }
-.wrapper .circle{
+.playing .wrapper .circle{
     height: 296px;
     width:296px;
     margin:0 auto;
@@ -67,7 +67,7 @@
     background-size: cover;
     position: relative;
 }
-.wrapper .circle.paly{    
+.playing .wrapper .circle.paly{    
     animation: rotate 15s linear infinite;
 }
 @keyframes rotate{
@@ -78,7 +78,7 @@
       transform: rotateZ(360deg);
     }
   }
-.wrapper .circle::before{
+.playing .wrapper .circle::before{
     content:'';
     position: absolute;
     top:0;
@@ -88,20 +88,20 @@
     background: url(http://ovmr7ndid.bkt.clouddn.com/circle2.png);
     background-size: cover;
 }
-.wrapper .circle .cover{
+.playing .wrapper .circle .cover{
     width:184px;
     height: 184px;
     position: absolute;
     top:calc(50% - 92px);
     left:calc(50% - 92px);
 }
-.wrapper .circle .cover img{
+.playing .wrapper .circle .cover img{
     width:calc(100% - 2px);
     height:calc(100% - 2px);
     border:1px solid #bbb;
     border-radius:50%;
 }
-.name{
+.playing .name{
     color:white;
     font-size: 18px;
     line-height: 1.1;
@@ -109,11 +109,11 @@
     text-align: center;
     margin-bottom: 14px;
 }
-.name span{
+.playing .name span{
     font-size: 16px;
     color: hsla(0,0%,100%,.6);
 }
-.lyric-content{
+.playing .lyric-content{
     height: 96px;
     overflow: hidden;
     margin-top: 14px;
@@ -122,10 +122,10 @@
     text-align: center;
     color: hsla(0,0%,100%,.6);
 }
-.lyric-content p{
+.playing .lyric-content p{
     padding-bottom: 8px;
 }
-.nnnnn1{
+.playing .nnnnn1{
     position: absolute;
     top: 0;
     left: 0;
@@ -134,7 +134,7 @@
     width: 100%;
     z-index: 9;
 }
-.more{
+.playing .more{
     position: absolute;
     bottom:20px;
     left:0;
@@ -143,10 +143,10 @@
     justify-content: center;
     font-size: 18px;
 }
-.more a{
+.playing .more a{
     display: block;
 }
-.more .open{
+.playing .more .open{
     height:42px;
     width:140px;
     color:#d43b32;
@@ -155,7 +155,7 @@
     padding-top:11px;
     padding-left:48px;
 }
-.more .download{
+.playing .more .download{
     height:42px;
     width:140px;
     color:#fff;
