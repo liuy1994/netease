@@ -78,56 +78,44 @@ function input() {
     <h5>搜索结果</h5>
     `
     $($('#search-content')[0]).append(p)    
-    searchName(value)
-    searchAuthor(value)
+    search(value)
 }
 
 
 
-//搜索歌曲
-function searchName(value) {
-    $('#search-result').empty()
-    if (value === '') {
-    } else {
-        var query = new AV.Query('Song')
-        query.contains('name', value)
-        query.find().then(function (result) {
-            search(result)
-        })
-    }
-}
+
 
 //搜索歌手
-function searchAuthor(value) {
+function search(value) {
     $($('#search-result')[0]).empty()
     if (value === '') {
     } else {
-        var query = new AV.Query('Song')
-        query.contains('author', value)
+        var query1 = new AV.Query('Song')
+        query1.contains('author', value)
+        var query2 = new AV.Query('Song')
+        query2.contains('name', value)
+        var query = AV.Query.or(query1,query2)
         query.find().then(function (result) {
-            search(result)
+            for (var i = 0; i < result.length; i++) {
+                var song = result[i].attributes
+                var a = `
+                <a href="./playing.html" data-id="${result[i].id}">
+                <div class="a">
+                    <div class="name">
+                        <p>${song.name}</p>
+                    </div>
+                    <div class="author sq">${song.author} - ${song.album}</div>
+                    <div class="icon-play"></div>
+                </div>
+            </a>
+                `
+                $('#search-result').append(a)        
+            }
         })
     }
 }
 
-//搜索
-function search(result) {
-    for (var i = 0; i < result.length; i++) {
-        var song = result[i].attributes
-        var a = `
-        <a href="./playing.html" data-id="${result[i].id}">
-        <div class="a">
-            <div class="name">
-                <p>${song.name}</p>
-            </div>
-            <div class="author sq">${song.author} - ${song.album}</div>
-            <div class="icon-play"></div>
-        </div>
-    </a>
-        `
-        $('#search-result').append(a)        
-    }
-}
+
 
 
 
