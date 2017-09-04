@@ -12,8 +12,6 @@
     z-index: -5;
     top:0;
     left:0;
-    background: transparent url(http://p1.music.126.net/tfa811GLreJI_S0h9epqRA==/3394192426154346.jpg) no-repeat 50% 50%;
-    background-size: 200%;
     filter: blur(50px) brightness(0.5);
 }
 .playing .point{
@@ -30,12 +28,11 @@
     transform: rotateZ(-20deg);
     animation-duration:0.2s;
 }
-.playing .wrapper.pause{
+.playing .wrapper{
     margin-top:-67px;
     position: relative;
 }
-.playing .wrapper.pause::before{
-    content:'';
+.playing .wrapper #icon-play{
     width:56px;
     height: 56px;
     border-radius: 50%;
@@ -47,8 +44,7 @@
     background: rgba(0,0,0,0.2) url(http://ovmr7ndid.bkt.clouddn.com/%E6%92%AD%E6%94%BE.png) no-repeat;
     background-size: cover;
 }
-.playing .wrapper.play::after{
-    content:'';
+.playing .wrapper #icon-pause{
     width:56px;
     height: 56px;
     border-radius: 50%;
@@ -56,8 +52,14 @@
     z-index: 10;
     top:calc(50% - 28px);
     left:calc(50% - 28px);
-    background: rgba(0,0,0,0.2) url(http://ovmr7ndid.bkt.clouddn.com/%E6%9A%82%E5%81%9C.png);
+    background: rgba(0,0,0,0.2) url(http://ovmr7ndid.bkt.clouddn.com/%E6%9A%82%E5%81%9C.png) no-repeat;
     background-size: cover;
+}
+.playing .wrapper.pause #icon-pause{
+    display: none;
+}
+.playing .wrapper.play #icon-play{
+    display: none;
 }
 .playing .wrapper .circle{
     height: 296px;
@@ -67,7 +69,7 @@
     background-size: cover;
     position: relative;
 }
-.playing .wrapper .circle.paly{    
+.playing .wrapper.play .circle{    
     animation: rotate 15s linear infinite;
 }
 @keyframes rotate{

@@ -28,7 +28,7 @@ var timer = null
 $('#search').on('input', function (e) {    
     if(timer){
         window.clearTimeout(timer)        
-    }else{        
+    }else{
     }
     timer = setTimeout(function(){
         var value = $(e.currentTarget).val().trim()
