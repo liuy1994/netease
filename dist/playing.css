@@ -123,6 +123,7 @@
     line-height: 1.5;
     text-align: center;
     color: hsla(0,0%,100%,.6);
+    border:1px solid red;
 }
 .playing .lyric-content p{
     padding-bottom: 8px;

@@ -6,34 +6,43 @@ AV.init({
 })
 
 //歌词行数变化
-var $lyric = $('.lyric-content')
-var $playing = $('.playing')
-$(window).resize(function(){
-    var height = $playing[0].clientHeight - $lyric[0].offsetTop - $lyric[0].clientHeight
-    if( height > 60 ){
+setTimeout(function(){    
+    change()
+    $(window).resize(function () {
+        change()
+    })
+},300)
+function change(){
+    var $more = $('.more')
+    var $lyric = $('.lyric-content')
+    var height = $more[0].offsetTop
+    if (height > 520) {
         $lyric.height(96)
     }
-    if( (height <= 60 ) && (height > 30)){
+    if ((height <= 520) && (height > 485)) {
         $lyric.height(64)
     }
-    if( (height <= 30 ) && (height > 0)){
+    if ((height <= 485) && (height > 455)) {
         $lyric.height(32)
     }
-    if( (height <= 0 ) && (height > -40)){
+    if ((height <= 455)) {
         $lyric.height(0)
     }
-})
+}
+
+
+
 
 
 //播放
-$('#icon-play').on('click',function(){
+$('#icon-play').on('click', function () {
     $($('.point')[0]).removeClass('pause').addClass('play')
     $($('.wrapper')[0]).removeClass('pause').addClass('play')
     $('audio')[0].play()
 })
 
 //暂停
-$('#icon-pause').on('click',function(){
+$('#icon-pause').on('click', function () {
     $($('.point')[0]).removeClass('play').addClass('pause')
     $($('.wrapper')[0]).removeClass('play').addClass('pause')
     $('audio')[0].pause()
@@ -49,7 +58,7 @@ query.get(id).then(function (results) {
     $('#playing').append(audio)
     var img = `<img src="${result.cover}"  alt="封面">`
     $('.cover').append(img)
-    var after = window.getComputedStyle($('.playing')[0],"::after")
+    var after = window.getComputedStyle($('.playing')[0], "::after")
     var style = `
     <style>
     .playing::after{
@@ -60,15 +69,47 @@ query.get(id).then(function (results) {
     `
     $('head').append(style)
     var lyric = result.lyric
-    console.log(lyric)
+    var regex2 = /([\u4e00-\u9fa5]|[A-Za-z]).*/g
+    var content = lyric.match(regex2)
+    var div = `
+    <div class="name">${result.name} - <span>${result.author}</span></div>
+    <div class="lyric-content"></div>
+    `
+    $('#playing').append(div)
+    for (var i = 0; i < content.length; i++) {
+        var p = `<p>${content[i]}</p>`
+        $('.lyric-content').append(p)
+    }
+    var regex1 = /\d.{7}/g
+    var time = lyric.match(regex1)
+    var array = []
+    for(var i=0;i<time.length;i++){
+        var times = time[i].split(':')
+        var seconds = (+times[0]*60) + (+times[1])
+        array.push(seconds)        
+    }
+    console.log(array)
+
+
+    setInterval(function(){
+        var audioTime = $('audio')[0].currentTime
+        console.log(audioTime)
+        for(i=0;i<array.length;i++){
+            
+        }
+    },300)
 
 
 
 
-
-
-
-    
     console.log('结束')
+    roll()
 })
+
+//歌词滚动
+function roll(){
+    console.log()
+}
+
+
 
