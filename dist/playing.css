@@ -115,7 +115,7 @@
     font-size: 16px;
     color: hsla(0,0%,100%,.6);
 }
-.playing .lyric-content{
+.playing .lyric{
     height: 96px;
     overflow: hidden;
     margin-top: 14px;
@@ -123,9 +123,8 @@
     line-height: 1.5;
     text-align: center;
     color: hsla(0,0%,100%,.6);
-    border:1px solid red;
 }
-.playing .lyric-content p{
+.playing .lyric .content p{
     padding-bottom: 8px;
 }
 .playing .nnnnn1{

@@ -1,3 +1,4 @@
+//leancloud
 var APP_ID = '1Qdc1TPXUizTEg6dQCV2CLPr-gzGzoHsz'
 var APP_KEY = 'iocnXl16pNnwl7oSE1mObQFu'
 AV.init({
@@ -14,7 +15,7 @@ setTimeout(function(){
 },300)
 function change(){
     var $more = $('.more')
-    var $lyric = $('.lyric-content')
+    var $lyric = $('.lyric')
     var height = $more[0].offsetTop
     if (height > 520) {
         $lyric.height(96)
@@ -49,7 +50,7 @@ $('#icon-pause').on('click', function () {
 })
 
 
-//获取歌曲信息
+//获取歌曲信息&歌词滚动
 let id = window.location.search.substr(1)
 var query = new AV.Query('Song')
 query.get(id).then(function (results) {
@@ -73,12 +74,12 @@ query.get(id).then(function (results) {
     var content = lyric.match(regex2)
     var div = `
     <div class="name">${result.name} - <span>${result.author}</span></div>
-    <div class="lyric-content"></div>
+    <div class="lyric"><div class="content"></div></div>
     `
     $('#playing').append(div)
     for (var i = 0; i < content.length; i++) {
         var p = `<p>${content[i]}</p>`
-        $('.lyric-content').append(p)
+        $('.content').append(p)
     }
     var regex1 = /\d.{7}/g
     var time = lyric.match(regex1)
@@ -88,14 +89,15 @@ query.get(id).then(function (results) {
         var seconds = (+times[0]*60) + (+times[1])
         array.push(seconds)        
     }
-    console.log(array)
-
-
     setInterval(function(){
         var audioTime = $('audio')[0].currentTime
-        console.log(audioTime)
         for(i=0;i<array.length;i++){
-            
+            if(i === array.length-1){
+                console.log(content)
+            }else if(array[i] <= audioTime && array[i+1]>audioTime){
+                $('.content')[0].style.transform = 'translateY(-' + (i-1)*32 + 'px)'                
+                break
+            }
         }
     },300)
 
@@ -103,13 +105,8 @@ query.get(id).then(function (results) {
 
 
     console.log('结束')
-    roll()
 })
 
-//歌词滚动
-function roll(){
-    console.log()
-}
 
 
 
