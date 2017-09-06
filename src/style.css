@@ -211,7 +211,7 @@
     position: absolute;
     left:0;
     top:5px;
-    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880);
+    background: url(http://ovmr7ndid.bkt.clouddn.com/icon1.png);
     background-size: 166px 97px;
 }
 .tabs .tabs-content .recommend .last-list .icon-play{
@@ -220,14 +220,14 @@
     position: absolute;
     top:16px;
     right:10px;
-    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) no-repeat -24px 0px;
+    background: url(http://ovmr7ndid.bkt.clouddn.com/icon1.png) no-repeat -24px 0px;
     background-size: 166px 97px;
 }
 .tabs .tabs-content .recommend .art{
     margin-top:4px;
     height: 200px;
     padding-top: 63px;
-    background:url(http://s3.music.126.net/m/s/img/recommand_bg_2x.png?d045fafc60e017b653f8065a87496922);
+    background:url(http://ovmr7ndid.bkt.clouddn.com/bg1.png);
     background-size: 372px 203px;
 }
 .tabs .tabs-content .recommend .art .logo{
@@ -265,7 +265,7 @@
     padding-left:19px;
     width:100%;
     height: 146px;
-    background: url(//i.loli.net/2017/08/23/599d8806abbd6.jpg) no-repeat 0px 0px;
+    background: url(http://ovmr7ndid.bkt.clouddn.com/bg2.jpg) no-repeat 0px 0px;
     background-size: 100% 146px;
     position: relative;
     display: flex;
@@ -345,7 +345,6 @@
 }
 .tabs .tabs-content .hot .hot-list .a .name span{
     color:#888;
-
 }
 .tabs .tabs-content .hot .hot-list .a .author{
     font-size: 12px;
@@ -368,7 +367,7 @@
     position: absolute;
     left:0px;
     top:3px;
-    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880);
+    background: url(http://ovmr7ndid.bkt.clouddn.com/icon1.png);
     background-size: 166px 97px;
 }
 .tabs .tabs-content .hot .hot-list .a .icon-play{
@@ -539,7 +538,7 @@
     position: absolute;
     left:0;
     top:5px;
-    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880);
+    background: url(http://ovmr7ndid.bkt.clouddn.com/icon1.png);
     background-size: 166px 97px;
 }
 .tabs .tabs-content .search .search-result .icon-play{
@@ -548,7 +547,7 @@
     position: absolute;
     top:16px;
     right:10px;
-    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880) no-repeat -24px 0px;
+    background: url(http://ovmr7ndid.bkt.clouddn.com/icon1.png) no-repeat -24px 0px;
     background-size: 166px 97px;
 }
 .tabs .tabs-content .search .search-result h6{
