@@ -26,7 +26,7 @@
 .playing .point.pause{
     transform-origin: 0 0;
     transform: rotateZ(-20deg);
-    animation-duration:0.2s;
+    transition-duration:0.5s;
 }
 .playing .wrapper{
     margin-top:-67px;
@@ -123,6 +123,8 @@
     line-height: 1.5;
     text-align: center;
     color: hsla(0,0%,100%,.6);
+}
+.playing .lyric .content{
 }
 .playing .lyric .content p{
     padding-bottom: 8px;

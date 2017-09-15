@@ -26,7 +26,7 @@ function change(){
     if ((height <= 485) && (height > 455)) {
         $lyric.height(32)
     }
-    if ((height <= 455)) {
+    if (height <= 455) {
         $lyric.height(0)
     }
 }
@@ -73,8 +73,8 @@ query.get(id).then(function (results) {
     var regex2 = /([\u4e00-\u9fa5]|[A-Za-z]).*/g
     var content = lyric.match(regex2)
     var div = `
-    <div class="name">${result.name} - <span>${result.author}</span></div>
-    <div class="lyric"><div class="content"></div></div>
+    <div class="name" id="name">${result.name} - <span>${result.author}</span></div>
+    <div class="lyric" id="lyric"><div class="content" id="content"></div></div>
     `
     $('#playing').append(div)
     for (var i = 0; i < content.length; i++) {
@@ -84,6 +84,8 @@ query.get(id).then(function (results) {
     var regex1 = /\d.{7}/g
     var time = lyric.match(regex1)
     var array = []
+    var contents = $('.content')[0]
+    $(contents).children()[0].style.color='white'
     for(var i=0;i<time.length;i++){
         var times = time[i].split(':')
         var seconds = (+times[0]*60) + (+times[1])
@@ -94,15 +96,18 @@ query.get(id).then(function (results) {
         for(i=0;i<array.length;i++){
             if(i === array.length-1){
             }else if(array[i] <= audioTime && array[i+1]>audioTime){
-                $('.content')[0].style.transform = 'translateY(-' + (i-1)*32 + 'px)'                
-                break
+                var $more = $('.more')
+                var height = $more[0].offsetTop
+                if (height > 485 ) {
+                    contents.style.transform = 'translateY(-' + (i-1)*32 + 'px)'
+                }else if (height <= 485) {
+                    contents.style.transform = 'translateY(-' + i*32 + 'px)'
+                }
+                $(contents).children()[i-1].style.color='hsla(0,0%,100%,.6)'
+                $(contents).children()[i].style.color='white'               
             }
         }
     },300)
-
-
-
-
 })
 
 
