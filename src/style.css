@@ -76,7 +76,7 @@
     left:0;
 }
 .tabs .tabs-content{
-    margin-top: 124px;
+    margin-top: 103px;
     position: relative;
 }
 
@@ -491,6 +491,7 @@
 .tabs .tabs-content .search .search-result{
     margin-left:10px;
     position: relative; 
+    padding-top:10px;
 }
 .tabs .tabs-content .search .search-result h5{
     margin-left:-10px;
