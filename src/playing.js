@@ -103,8 +103,10 @@ query.get(id).then(function (results) {
                 }else if (height <= 485) {
                     contents.style.transform = 'translateY(-' + i*32 + 'px)'
                 }
-                $(contents).children()[i-1].style.color='hsla(0,0%,100%,.6)'
-                $(contents).children()[i].style.color='white'               
+                if(i){
+                    $(contents).children()[i-1].style.color='hsla(0,0%,100%,.6)'
+                    $(contents).children()[i].style.color='white'
+                }
             }
         }
     },300)
