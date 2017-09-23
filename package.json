@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist/*; postcss --use autoprefixer --dir dist/ src/*.css;eslint src/*.js && babel src/playing.js|uglifyjs > dist/playing.js;babel src/index.js|uglifyjs > dist/index.js;echo 'success'"
+    "no-gulp": "rm -rf dist/*; postcss --use autoprefixer --dir dist/ src/*.css;eslint src/*.js && babel src/playing.js|uglifyjs > dist/playing.js;babel src/index.js|uglifyjs > dist/index.js;echo 'success'",
+    "gulp": "gulp",
+    "watch": "gulp watch"
   },
   "author": "",
   "license": "ISC",
@@ -12,11 +14,23 @@
     "leancloud-storage": "^3.1.1"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "eslint": "^4.7.2",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-coffee": "^2.3.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-minify": "^1.0.0",
+    "gulp-postcss": "^7.0.0"
   }
+  
 }
