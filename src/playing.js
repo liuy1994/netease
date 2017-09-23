@@ -69,6 +69,8 @@ function roll(){
     <div class="lyric" id="lyric"><div class="content" id="content"></div></div>
     `
   }
+
+  
   let id = window.location.search.substr(1)
   var query = new AV.Query('Song')
   query.get(id).then(function (results) {

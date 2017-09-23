@@ -83,8 +83,6 @@ function input() {
 
 
 
-
-
 //搜索歌手
 function search(value) {
   $($('#search-result')[0]).empty()
@@ -99,7 +97,7 @@ function search(value) {
       for (var i = 0; i < result.length; i++) {
         var song = result[i].attributes
         var a = `
-                <a href="./playing.html" data-id="${result[i].id}">
+                <a href="./playing.html?${result[i].id}" data-id="${result[i].id}">
                 <div class="a">
                     <div class="name">
                         <p>${song.name}</p>
@@ -114,16 +112,6 @@ function search(value) {
     })
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 //查找ID
 var a = $('.list a')
