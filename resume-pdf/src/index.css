@@ -15,6 +15,12 @@ span{color: #dd50dc;font-weight: bold;}
     color:white;
     border-bottom:10px solid #de2;
     margin-bottom:5px;
+    position: relative;
+}
+.topbar div{
+    position: absolute;
+    bottom: 18px;
+    right:20px;
 }
 .topbar h4{
     margin-top:5px;
