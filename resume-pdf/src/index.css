@@ -10,10 +10,11 @@ span{color: #dd50dc;font-weight: bold;}
     margin:0 auto;
 }
 .topbar{
-    padding:30px;
+    padding: 18px 30px;
     background-color:#08b; 
     color:white;
     border-bottom:10px solid #de2;
+    margin-bottom:5px;
 }
 .topbar h4{
     margin-top:5px;
@@ -27,8 +28,8 @@ span{color: #dd50dc;font-weight: bold;}
     font-size: 20px;
     position: relative;
     padding-left: 36px;
-    line-height: 40px;
-    margin-top: 20px;
+    line-height: 30px;
+    margin-bottom: 6px;
 }
 .content h3::before{
     content:'';
@@ -42,7 +43,7 @@ span{color: #dd50dc;font-weight: bold;}
 .content h4{
     font-size: 18px;
     font-weight:bold;
-    line-height: 30px;
+    line-height: 24px;
 }
 .content ul{
     margin-left: 40px;
@@ -51,7 +52,7 @@ span{color: #dd50dc;font-weight: bold;}
 }
 .content p{
     padding-left:2em;
-    line-height: 1.8em;
+    line-height: 1.2em;
 }
 .introduce ul{
     display: flex;
@@ -60,7 +61,7 @@ span{color: #dd50dc;font-weight: bold;}
 }
 .introduce li{
     width:305px;
-    line-height: 30px;
+    line-height: 1.2em;
 }
 
 .introduce h3::before{
@@ -74,9 +75,6 @@ span{color: #dd50dc;font-weight: bold;}
     background-color: #08b;
 }
 .projects li{
-    margin-bottom: 30px;
-}
-.projects h4{
     margin-bottom: 10px;
 }
 .projects img{
@@ -84,7 +82,7 @@ span{color: #dd50dc;font-weight: bold;}
     margin-left:20%;
 }
 .projects p{
-    line-height: 1.8em;
+    line-height: 1.2em;
 }
 .projects .more{
     display: flex;
@@ -130,11 +128,11 @@ span{color: #dd50dc;font-weight: bold;}
     background-size: 30px 30px;
     background-color: #08b;
 }
-.about{
-    margin-bottom: 120px;
-}
 .about h3::before{
     background: url(../img/5.png) no-repeat 4px 4px;
     background-size: 30px 30px;
     background-color: #08b;
+}
+.about p{
+    padding-left: 2.2em;
 }

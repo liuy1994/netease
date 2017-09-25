@@ -5,161 +5,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./src/index.css">
-    <link rel="icon" href="./img/all.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shorcut icon" href="img/all.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
     <title>刘勇的简历</title>
 </head>
 
-<body>
+<body>    
     <div class="resume">
-        <div class="topbar">
-            <h1>刘勇</h1>
-            <h4>爱生活，爱学习，爱前端</h4>
-        </div>
-        <div class="content">
-            <div class="introduce">
-                <h3>个人介绍</h3>
-                <ul>
-                    <li>年 龄：23岁</li>
-                    <li>住 址：成都市温江区</li>
-                    <li>电 话：13980684676</li>
-                    <li>邮 箱：<a href="mailto:liuy1994@outlook.com">liuy1994@outlook.com</a></li>
-                    <li>学 校：长安大学(211)</li>
-                    <li>Q  Q ：925339056</li>
-                </ul>
+        <div class="aside">
+            <img src="img/avat.jpg" alt="avat" class="avat">
+            <h2>刘 勇</h2>
+            <ol id="nav">
+                <li class="active">&nbsp;我&nbsp;</li>
+                <li>项 目</li>
+                <li>技 能</li>
+                <li>联 系</li>
+            </ol>
+            <button><a href="刘勇.pdf" download>P D F</a></button>
+            <div class="icons">
+                <a href="mailto:liuy1994@outlook.com"  title="email"><img src="icons/email.png" alt="邮箱"></a>
+                <a href="https://github.com/liuy1994" title="github"><img src="icons/github.png" alt="github"></a>
+                <a href="https://github.com/liuy1994/blog/issues" title="blog"><img src="icons/blog.png" alt="博客"></a>
             </div>
-            <div class="skills">
-                <h3>技能总结</h3>
-                <ul>
+        </div>
+        <div class="content" id="content">
+            <div class="about active ">
+                <h1>刘 勇</h1>
+                <h2>意向职位：前端开发</h2>
+                <h2>年龄：23岁</h2>
+                <h2>手机：13980684676</h2>
+                <h2>住址：成都市温江区</h2>
+                <ol>
                     <li>
-                        <h4>1、静态页面制作</h4>
-                        <p>熟练使用<span>Flex 布局</span>、<span>CSS 2布局</span>以及<span>CSS 3动画</span></p>
-                        <p><span>像素级还原</span>设计稿，并以响应式适应各种尺寸的屏幕</p>
+                        <h3>2012.9 ~ 2016.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————&nbsp;&nbsp;&nbsp;<span>长安大学</span></h3>
                     </li>
                     <li>
-                        <h4>2、移动端页面制作</h4>
-                        <p>采用<span>动态REM</span> 方案适配各尺寸手机屏幕</p>
-                        <p>熟悉手机端页面开发，不同型号不同尺寸手机端的页面调试</p>
+                        <h3>2016.7 ~ 至今  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————&nbsp;&nbsp;&nbsp;<span>待业</span></h3>
                     </li>
-                    <li>
-                        <h4>3、原生JavaScript</h4>
-                        <p>理解基本概念，如<span>原型链</span>、<span>闭包</span>、作用域链、Promise异步、this等</p>
-                        <p>能够使用<span>原生JS</span>将代码按功能封装成DOM 库</p>
-                        <p>了解模块化，能够使用<span>gulp</span>、<span>webapck</span>、RequireJS打包代码</p>
-                    </li>
-                    <li>
-                        <h4>4、配合后端开发</h4>
-                        <p>熟悉<span>自动加载</span>、<span>懒加载</span>以及预加载等页面优化策略</p>
-                        <p>了解HTTP 协议、AJAX 请求</p>
-                        <p>了解两种跨域策略：<span>CORS</span> 和JSONP </p>
-                    </li>
-                    <li>
-                        <h4>5、热爱学习</h4>
-                        <p>乐于学习新的技术(不仅限于前端)</p>
-                        <p>可以适应长时间单纯而不枯燥的学习</p>
-                        <p>正在学习Vue </p>
-                        <p>大学英语四级(CET4) 证书，能够阅读不是太难的英文文档</p>
-                    </li>
-                </ul>
+                </ol>
+                <ol>
+                    <li><h3>热爱生活，性格乐观，每天都充满正能量</h3></li>
+                    <li><h3>热爱技术，对于不熟悉的方法充满好奇</h3></li>
+                    <li><h3>热爱学习，努力提升自我，完善自我</h3></li>
+                    <li><h3>看电影，听音乐，减肥，持续减肥</h3></li>
+                </ol>
             </div>
             <div class="projects">
-                <h3>项目展示</h3>
+                <h1>项目介绍</h1>
                 <ul>
                     <li>
-                        <h4>1、网易云音乐移动端</h4>
-                        <img src="./img/netease.png" alt="网易云音乐移动端">
-                        <p>移动端网页版网易云音乐，不同分支分别使用gulp、webpack处理文件</p>
-                        <p>功能：按曲名或歌手搜索、歌曲播放和暂停、歌词滚动</p>
-                        <p>部署：七牛云、LeanCLoud</p>
-                        <p>技术栈：原生JS、jQuery、<span>gulp</span>、<span>webpack</span></p>
+                        <h2>1、网易云音乐移动端</h2>
+                        <img class="print" src="./img/netease.png" alt="网易云音乐移动端">
+                        <p>移动端网页版网易云音乐，实现按曲名或歌手搜索、歌曲播放和暂停、歌词滚动等功能</p>
+                        <p>以Leancloud 为数据库，通过函数节流处理搜索框请求重复发送问题</p>
+                        <p>不同分支分别使用gulp、webpack处理文件</p>
+                        <p>技术栈：原生JS、jQuery、leancloud、gulp、webpack</p>
                         <p>(预览请使用移动端模式)</p>
                         <div class="more">
-                            <a href="https://liuy1994.github.io/netease">
-                                <div class="preview">预览</div>
-                            </a>
-                            <a href="https://github.com/liuy1994/netease">
-                                <div class="demo">demo</div>
-                            </a>
+                            <div class="icons">
+                                <img src="icons/js.png" alt="js">
+                                <img src="icons/webpack.png" alt="webpack">
+                                <img src="icons/jquery.png" alt="jquery">
+                                <img src="icons/gulp.png" alt="gulp">
+                            </div>
+                            <div class="preview">
+                                <a href="https://liuy1994.github.io/netease"><div>&nbsp;预览</div></a>
+                                <a href="https://github.com/liuy1994/netease"><div>demo</div></a>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <h4>2、响应式布局+懒加载</h4>
-                        <img src="./img/layout.jpg" alt="响应式布局">
+                        <h2>1、Vue的位置</h2>
+                        <img class="print" src="./img/Vue.png" alt="Vue">
+                        <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                        <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                        <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                        <p>技术栈：Vue、leancloud、scss、leancloud</p>
+                        <div class="more">
+                            <div class="icons">
+                                <img src="icons/vue.png" alt="vue">
+                                <img src="icons/js.png" alt="js">
+                                <img src="icons/sass.png" alt="sass">
+                            </div>
+                            <div class="preview">
+                                <a href="https://liuy1994.github.io/netease"><div>&nbsp;预览</div></a>
+                                <a href="https://github.com/liuy1994/netease"><div>demo</div></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2>2、响应式布局+懒加载</h2>
+                        <img class="print" src="./img/layout.jpg" alt="响应式布局">
                         <p>利用媒体查询在不同尺寸的屏幕上显示不同的布局</p>
-                        <p>原生JS实现懒加载、自动加载</p>
+                        <p>原生JS实现懒加载、自动加载下一页</p>
                         <p>技术栈：<span>媒体查询</span>、纯CSS、<span>Flex布局</span>、原生JS</p>
                         <div class="more">
-                            <a href="https://liuy1994.github.io/lazyload">
-                                <div class="preview">预览</div>
-                            </a>
-                            <a href="https://github.com/liuy1994/lazyload">
-                                <div class="demo">demo</div>
-                            </a>
+                            <div class="icons">
+                                <img src="icons/js.png" alt="js">
+                                <img src="icons/css.png" alt="css">
+                            </div>
+                            <div class="preview">
+                                <a href="https://liuy1994.github.io/lazyload"><div>&nbsp;预览</div></a>
+                                <a href="https://github.com/liuy1994/lazyload"><div>demo</div></a>
+                            </div>
                         </div>
+
                     </li>
                     <li>
-                        <h4>3、英雄联盟网站首页</h4>
-                        <img src="./img/lol.png" alt="英雄联盟网站首页">
-                        <p>桌面端静态页面，像素级还原网页，内容主要包括顶栏悬挂、轮播和Tab等</p>
-                        <p>技术栈：<span>原生JS</span>、<span>Flex布局</span>、jQuery、CSS</p>
+                        <h2>3、英雄联盟网站首页</h2>
+                        <img class="print" src="./img/lol.png" alt="英雄联盟网站首页">
+                        <p>桌面端静态页面，像素级还原网页</p>
+                        <p>组件包括顶栏悬挂、轮播和Tab等</p>
+                        <p>技术栈：原生JS、Flex布局、jQuery、CSS</p>
                         <div class="more">
-                            <a href="https://liuy1994.github.io/lol">
-                                <div class="preview">预览</div>
-                            </a>
-                            <a href="https://github.com/liuy1994/lol">
-                                <div class="demo">demo</div>
-                            </a>
+                            <div class="icons">
+                                <img src="icons/js.png" alt="js">
+                                <img src="icons/jquery.png" alt="jquery">
+                                <img src="icons/css.png" alt="css">
+                            </div>
+                            <div class="preview">
+                                <a href="https://liuy1994.github.io/lol"><div>&nbsp;预览</div></a>
+                                <a href="https://github.com/liuy1994/lol"><div>demo</div></a>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <h4>4、原生JS绘制小黄人</h4>
-                        <img src="./img/yellow.png" alt="小黄人">
-                        <p>使用原生JS进行DOM操作</p>
+                        <h2>4、原生JS绘制小黄人</h2>
+                        <img class="print" src="./img/yellow.png" alt="小黄人">
+                        <p>纯CSS绘制一个小黄人</p>
+                        <p>使用原生JS进行DOM操作，一步一步绘制</p>
                         <p>技术栈：<span>原生JS</span>、CSS</p>
                         <div class="more">
-                            <a href="https://liuy1994.github.io/DOM-yellow">
-                                <div class="preview">预览</div>
-                            </a>
-                            <a href="https://github.com/liuy1994/DOM-yellow">
-                                <div class="demo">demo</div>
-                            </a>
+                            <div class="icons">
+                                <img src="icons/js.png" alt="js">
+                                <img src="icons/css.png" alt="css">
+                            </div>
+                            <div class="preview">
+                                <a href="https://liuy1994.github.io/DOM-yellow"><div>&nbsp;预览</div></a>
+                                <a href="https://github.com/liuy1994/DOM-yellow"><div>demo</div></a>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <h4>5、cavas画板</h4>
-                        <img src="./img/canvas.png" alt="canvas">
-                        <p>移动端网页版绘图工具，能够进行清除、删除、保存等操作</p>
+                        <h2>5、cavas画板</h2>
+                        <img class="print" src="./img/canvas.png" alt="canvas">
+                        <p>移动端网页版绘图工具</p>
+                        <p>能够进行清除、删除、保存等操作</>
                         <p>技术栈：<span>原生JS</span>、<span>Canvas</span></p>
                         <p>(预览请使用移动端模式)</p>
                         <div class="more">
-                            <a href="https://liuy1994.github.io/draw-board">
-                                <div class="preview">预览</div>
-                            </a>
-                            <a href="https://github.com/liuy1994/draw-board">
-                                <div class="demo">demo</div>
-                            </a>
+                            <div class="icons">
+                                <img src="icons/js.png" alt="js">
+                                <img src="icons/html5.png" alt="html5">
+                            </div>
+                            <div class="preview">
+                                <a href="https://liuy1994.github.io/lazyload"><div>&nbsp;预览</div></a>
+                                <a href="https://github.com/liuy1994/lazyload"><div>demo</div></a>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="hobbies">
-                <h3>爱好兴趣</h3>
+            <div class="skills">
+                <h1>技能总结</h1>
                 <ul>
-                    <li>看电影听音乐</li>
-                    <li>减肥</li>
-                    <li>持续减肥</li>
-                    </ul>
-
+                    <li>
+                        <h2>1、静态页面制作</h2>
+                        <p>熟练使用Flex 布局、CSS 2布局以及CSS 3动画</p>
+                        <p>像素级还原设计稿，并以响应式适应各种尺寸的屏幕</p>
+                    </li>
+                    <li>
+                        <h2>2、移动端页面制作</h2>
+                        <p>采用动态REM方案适配各尺寸手机屏幕</p>
+                        <p>熟悉手机端页面开发，用浏览器模拟不同幸好、不同尺寸手机端的页面调试</p>
+                    </li>
+                    <li>
+                        <h2>3、原生JavaScript</h2>
+                        <p>理解基本概念，如原型链、闭包、作用域链、Promise异步、this 等</p>
+                        <p>能够使用原生JS 将代码按功能封装成DOM 库</p>
+                        <p>了解模块化，能够使用gulp、 webapck、 RequireJS 打包代码</p>
+                    </li>
+                    <li>
+                        <h2>4、配合后端开发</h2>
+                        <p>熟悉自动加载、懒加载以及预加载等页面优化策略</p>
+                        <p>了解HTTP 协议、 AJAX 请求</p>
+                        <p>了解两种跨域策略：CORS 和JSONP </p>
+                    </li>
+                    <li>
+                        <h2>5、热爱学习</h2>
+                        <p>乐于学习新的技术(不仅限于前端)</p>
+                        <p>可以适应长时间单纯而不枯燥的学习</p>
+                        <p>大学英语四级(CET4) 证书，能够阅读英文文档</p>
+                    </li>
+                </ul>
             </div>
-            <div class="about">
-                <h3>更多</h3>
-                <p>我的github：<a href="https://github.com/liuy1994">https://github.com/liuy1994</a></p>
-                <p>我的博客：<a href="https://github.com/liuy1994/blog/issues">https://github.com/liuy1994/blog/issues</a></p>
+            <div class="contact">
+                <h1>请联系我</h1>
+                <h2><img  src="icons/email-1.png" alt="email"><a href="mailto:liuy1994@outlook.com">liuy1994@outlook.com</a></h2>
+                <h2><img src="icons/phone.png" alt="phone">13980684676</h2>
+                <h2><img src="icons/qq.png" alt="QQ">925339056</h2>
+                <h2><img src="icons/wx.png" alt="wx"><img class="icon" src="icons/wechat.jpg" alt="weixin"></h2>
             </div>
         </div>
     </div>
-
-    <script src="./src/index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
