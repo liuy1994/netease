@@ -2,7 +2,6 @@
 a{text-decoration: none;color:inherit;}
 ul,ol{list-style: none;}
 h1,h2,h3,h4,h5{font-weight: normal}
-body{background: #eee;}
 *::-webkit-scrollbar {display:none}
 
 .resume{
@@ -83,7 +82,6 @@ body{background: #eee;}
 }
 .content{
     height: 99vh;
-    background: #eee;
     overflow: auto;
     min-width:800px;
     margin:0 auto;
@@ -94,9 +92,6 @@ body{background: #eee;}
 }
 .content>*.active{
     display: block;
-}
-.content .about{
-
 }
 .content .about h1{
     font-size:40px;
@@ -124,6 +119,9 @@ body{background: #eee;}
 }
 .projects li{
     margin-top:20px;
+    margin-bottom:60px;
+    padding: 10px;
+    box-shadow: 0 6px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -163,6 +161,9 @@ body{background: #eee;}
     padding:8px;
     border-radius: 10px;
     margin-right:10px;
+}
+.projects .more .preview div:hover{
+    color:red;
 }
 .projects .more .preview:first-child{
     padding-left: 12px;

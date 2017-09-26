@@ -14,7 +14,7 @@ span{color: #dd50dc;font-weight: bold;}
     background-color:#08b; 
     color:white;
     border-bottom:10px solid #de2;
-    margin-bottom:5px;
+    margin-bottom:10px;
     position: relative;
 }
 .topbar div{
@@ -34,8 +34,10 @@ span{color: #dd50dc;font-weight: bold;}
     font-size: 20px;
     position: relative;
     padding-left: 36px;
-    line-height: 30px;
+    line-height: 40px;
     margin-bottom: 6px;
+    
+    margin-top: 6px;
 }
 .content h3::before{
     content:'';
@@ -49,7 +51,10 @@ span{color: #dd50dc;font-weight: bold;}
 .content h4{
     font-size: 18px;
     font-weight:bold;
-    line-height: 24px;
+    line-height: 30px;
+    padding-bottom: 2px;
+    
+    padding-top: 10px;
 }
 .content ul{
     margin-left: 40px;
@@ -58,7 +63,7 @@ span{color: #dd50dc;font-weight: bold;}
 }
 .content p{
     padding-left:2em;
-    line-height: 1.2em;
+    line-height: 1.6em;
 }
 .introduce ul{
     display: flex;
@@ -67,7 +72,7 @@ span{color: #dd50dc;font-weight: bold;}
 }
 .introduce li{
     width:305px;
-    line-height: 1.2em;
+    line-height: 1.6em;
 }
 
 .introduce h3::before{
