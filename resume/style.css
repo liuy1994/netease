@@ -3,7 +3,8 @@ a{text-decoration: none;color:inherit;}
 ul,ol{list-style: none;}
 h1,h2,h3,h4,h5{font-weight: normal}
 *::-webkit-scrollbar {display:none}
-
+h1{font-size: 28px;}
+h2{font-size: 20px;}
 .resume{
     margin:0 auto;
     display: flex;
@@ -25,14 +26,14 @@ h1,h2,h3,h4,h5{font-weight: normal}
     border-radius:50%;
 }
 .aside h2{
-    font-size:30px;
+    font-size: 28px;
 }
 .aside ol{
     margin-top:40px;
     width:100%;
 }
 .aside ol>li{
-    font-size:1.5em;
+    font-size:1.2em;
     line-height:60px;
     display: flex;
     justify-content: center;
@@ -49,9 +50,8 @@ h1,h2,h3,h4,h5{font-weight: normal}
 .aside button{
     background: transparent;
     margin-top:50px;
-    font-size:1.5em;
     color: #5b0;
-    padding:10px;
+    padding:18px 24px;
     border:1px solid black;
     border-radius:25%;
 }
@@ -94,12 +94,11 @@ h1,h2,h3,h4,h5{font-weight: normal}
     display: block;
 }
 .content .about h1{
-    font-size:40px;
     line-height:70px;
 }
 .content .about h2{
+    font-size: 20px;
     margin-top:10px;
-    font-size:1.4em;
     line-height:40px;
 }
 .content .about ol{
@@ -110,7 +109,6 @@ h1,h2,h3,h4,h5{font-weight: normal}
     margin-bottom: 20px;
 }
 .content .projects h1{
-    font-size:40px;
     line-height:70px;
 }
 .projects ul{
@@ -169,7 +167,6 @@ h1,h2,h3,h4,h5{font-weight: normal}
     padding-left: 12px;
 }
 .skills h1{
-    font-size:40px;
     line-height:70px;
 }
 .skills li{
@@ -188,7 +185,6 @@ h1,h2,h3,h4,h5{font-weight: normal}
     position: relative;
 }
 .contact h1{
-    font-size:40px;
     line-height:70px;
     position: relative;
     top: -70px;
@@ -196,7 +192,6 @@ h1,h2,h3,h4,h5{font-weight: normal}
 }
 .contact h2{
     margin-top:10px;
-    font-size:1.4em;
     line-height:60px;
     position: relative;
 }
