@@ -147,3 +147,4 @@ function addId(name){
         a[j].setAttribute('href','./playing.html?' + id)
     })
 }
+
