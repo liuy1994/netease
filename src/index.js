@@ -74,8 +74,8 @@ function input() {
     var value = $($('#search')[0]).val().trim()
     $($('#search-content')[0]).empty()
     var p = `
-    <p>搜索“${value}”</p>
-    <h5>搜索结果</h5>
+        <p>搜索“${value}”</p>
+        <h5>搜索结果</h5>
     `
     $($('#search-content')[0]).append(p)    
     search(value)
@@ -99,15 +99,15 @@ function search(value) {
             for (var i = 0; i < result.length; i++) {
                 var song = result[i].attributes
                 var a = `
-                <a href="./playing.html?${result[i].id}" data-id="${result[i].id}">
-                <div class="a">
-                    <div class="name">
-                        <p>${song.name}</p>
+                    <a href="./playing.html?${result[i].id}" data-id="${result[i].id}">
+                    <div class="a">
+                        <div class="name">
+                            <p>${song.name}</p>
+                        </div>
+                        <div class="author sq">${song.author} - ${song.album}</div>
+                        <div class="icon-play"></div>
                     </div>
-                    <div class="author sq">${song.author} - ${song.album}</div>
-                    <div class="icon-play"></div>
-                </div>
-            </a>
+                </a>
                 `
                 $('#search-result').append(a)        
             }

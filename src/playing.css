@@ -15,9 +15,9 @@
     filter: blur(50px) brightness(0.5);
 }
 .playing .point{
-    height: 137px;
-    width:96px;
-    background: url(http://ovmr7ndid.bkt.clouddn.com/point.png);
+    height: 138px;
+    width:95px;
+    background: url(./point.png);
     background-size: cover;
     margin-left:calc(50% - 15px);
     position: relative;
@@ -69,8 +69,8 @@
     background-size: cover;
     position: relative;
 }
-.playing .wrapper.play .circle{    
-    animation: rotate 15s linear infinite;
+.playing .wrapper.play .circle{
+    animation: rotate 15s linear infinite ;
 }
 @keyframes rotate{
     0%{
